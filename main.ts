@@ -1,7 +1,4 @@
 let bright = 0
-input.onGesture(Gesture.FreeFall, function () {
-    flash()
-})
 function flash () {
     basic.showLeds(`
         # # # # #
@@ -19,3 +16,6 @@ function flash () {
     bright = 255
     led.setBrightness(bright)
 }
+input.onGesture(Gesture.Shake, function () {
+    flash()
+})
